@@ -16,22 +16,19 @@ body {
 
 /* header */
 
-
 /* to toggle nav bar */
-.showNav-enter{
+.showNav-enter {
   margin-top: 5vh;
-  transition:all 1000ms;
-}
-
-/* to toggle nav bar */
-.hideNav-enter{
-  margin-top: -15vh;
   transition: all 1000ms;
 }
 
+/* to toggle nav bar */
+.hideNav-enter {
+  margin-top: -15vh;
+  transition: all 1500ms;
+}
 
-
-header{
+header {
   background-color: white;
   border-radius: 100px;
   height: 7vh;
@@ -42,27 +39,27 @@ header{
   position: fixed;
   display: flex;
   z-index: 10;
+  opacity: 0.9;
 }
 
-header ul{
+header ul {
   width: 100%;
   border-radius: 100px;
   display: flex;
   background-color: transparent;
 }
 
-header li{
-  list-style:none ;
+header li {
+  list-style: none;
   background-color: transparent;
   color: black;
   margin: auto;
   font-weight: 900;
 }
 
-li:hover{
+li:hover {
   color: rgb(25, 245, 170);
 }
-
 
 /* name */
 .myInfo-container {
@@ -81,6 +78,9 @@ li:hover{
   color: grey;
   font-size: medium;
 }
+.myInfo-container div {
+  margin: auto;
+}
 .myInfo-container div.bgImg {
   border: 3px solid white;
   box-sizing: border-box;
@@ -96,11 +96,26 @@ li:hover{
   animation-name: rotate;
 }
 
-
 .myInfo-container img {
   width: 30vw;
 }
 
+.myInfo-container span{
+  display: inline-block;
+}
+
+.myInfo-container span.blast {
+  margin: 2px;
+  display: inline-block;
+  min-width: 10px;
+  transition: all 0.4s;
+  background-color: transparent;
+  cursor: pointer;
+}
+.myInfo-container span.blast:hover {
+  color: rgb(25, 245, 170);
+  transform: rotate(-20deg) scale(1.3);
+}
 
 @keyframes rotate {
   0% {
@@ -114,8 +129,6 @@ li:hover{
   }
 }
 
-
-
 /* universal */
 
 .green {
@@ -128,11 +141,13 @@ li:hover{
   .myInfo-container {
     font-size: 1.8rem;
   }
-  .myInfo-container div{
+  .myInfo-container div {
     margin: auto;
+    margin-top: 0;
   }
-  .myInfo-container div.bgImg{
+  .myInfo-container div.bgImg {
     width: 40%;
+    margin: auto;
   }
   .myInfo-container img {
     width: 40vw;

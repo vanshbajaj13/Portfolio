@@ -1,5 +1,5 @@
 import Header from "./components/Header/Header";
-import Name from "./components/Name/Name";
+import Home from "./components/Home/Home";
 
 function App() {
 
@@ -8,7 +8,7 @@ function App() {
     <div id="trailer">
     </div>
     <Header />
-    <Name />
+    <Home />
     </div>
   );
 }

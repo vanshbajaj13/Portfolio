@@ -1,0 +1,140 @@
+* {
+  background-color: #2d2c38;
+  color: white;
+  font-family: "Dosis", sans-serif;
+  margin: 0%;
+}
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+/* header */
+
+
+/* to toggle nav bar */
+.showNav-enter{
+  margin-top: 5vh;
+  transition:all 1000ms;
+}
+
+/* to toggle nav bar */
+.hideNav-enter{
+  margin-top: -15vh;
+  transition: all 1000ms;
+}
+
+
+
+header{
+  background-color: white;
+  border-radius: 100px;
+  height: 7vh;
+  width: 70%;
+  margin: auto;
+  margin-top: 5vh;
+  left: 15%;
+  position: fixed;
+  display: flex;
+  z-index: 10;
+}
+
+header ul{
+  width: 100%;
+  border-radius: 100px;
+  display: flex;
+  background-color: transparent;
+}
+
+header li{
+  list-style:none ;
+  background-color: transparent;
+  color: black;
+  margin: auto;
+  font-weight: 900;
+}
+
+li:hover{
+  color: rgb(25, 245, 170);
+}
+
+
+/* name */
+.myInfo-container {
+  display: flex;
+  height: 100vh;
+  justify-content: space-between;
+  padding: 2vw;
+  align-items: center;
+  flex-wrap: wrap;
+  font-size: 2.4rem;
+}
+
+
+.myInfo-container p {
+  margin-top: 1vh;
+  color: grey;
+  font-size: medium;
+}
+.myInfo-container div.bgImg {
+  border: 3px solid white;
+  box-sizing: border-box;
+  overflow: hidden;
+  animation-duration: 8s;
+  background-color: white;
+  animation-timing-function: ease-in-out;
+  animation-delay: 0s;
+  animation-iteration-count: infinite;
+  animation-direction: normal;
+  animation-fill-mode: none;
+  animation-play-state: running;
+  animation-name: rotate;
+}
+
+
+.myInfo-container img {
+  width: 30vw;
+}
+
+
+@keyframes rotate {
+  0% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+  50% {
+    border-radius: 30% 60% 70% 40%/50% 60% 30% 60%;
+  }
+  100% {
+    border-radius: 60% 40% 30% 70%/60% 30% 70% 40%;
+  }
+}
+
+
+
+/* universal */
+
+.green {
+  color: rgb(25, 245, 170);
+}
+
+/* media screen */
+
+@media screen and (max-width: 660px) {
+  .myInfo-container {
+    font-size: 1.8rem;
+  }
+  .myInfo-container div{
+    margin: auto;
+  }
+  .myInfo-container div.bgImg{
+    width: 40%;
+  }
+  .myInfo-container img {
+    width: 40vw;
+  }
+}

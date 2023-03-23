@@ -5,13 +5,12 @@ const Header = () => {
 
   var oldScrollY = window.scrollY;
 
-
   document.addEventListener("scroll", (event) => {
     var scrollDiff = oldScrollY - window.scrollY;
     if (scrollDiff < -7) {
       setNavBarToggle("hideNav-enter");
     } else if (scrollDiff > 7) {
-        setNavBarToggle("showNav-enter");
+      setNavBarToggle("showNav-enter");
     }
     oldScrollY = window.scrollY;
   });
@@ -19,12 +18,20 @@ const Header = () => {
   return (
     <div>
       <header className={navBarToggle}>
-      <ul>
-        <li>Home</li>
-        <li>About</li>
-        <li>Projects</li>
-        <li>Contact</li>
-      </ul>
+        <ul>
+          <li>
+            <a href="#home">Home</a>
+          </li>
+          <li>
+            <a href="#aboutMe">About</a>
+          </li>
+          <li>
+            <a href="#projectPage">Projects</a>
+          </li>
+          <li>
+            <a href="#contactMe">Contact</a>
+          </li>
+        </ul>
       </header>
     </div>
   );

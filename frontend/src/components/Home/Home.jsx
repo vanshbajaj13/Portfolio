@@ -1,4 +1,4 @@
-import picture from "./picture/IMG_1337.jpg";
+import picture from "../../asset/Images/IMG_1337.jpg";
 import Name from "./Name";
 
 const Home = () => {
@@ -7,7 +7,7 @@ const Home = () => {
   const text3 = Array.from(" bajaj");
 
   return (
-    <div className="myInfo-container">
+    <div className="myInfo-container" id="home">
     <div className="bgImg">
         <img src={picture} alt="my pic" />
       </div>

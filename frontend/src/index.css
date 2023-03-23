@@ -3,7 +3,9 @@
   color: white;
   font-family: "Dosis", sans-serif;
   margin: 0%;
+  --green: rgb(25, 245, 170);
 }
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -44,6 +46,7 @@ header {
 
 header ul {
   width: 100%;
+  padding-left: 0%;
   border-radius: 100px;
   display: flex;
   background-color: transparent;
@@ -58,7 +61,7 @@ header li {
 }
 
 li:hover {
-  color: rgb(25, 245, 170);
+  color: var(--green);
 }
 
 /* name */
@@ -70,8 +73,9 @@ li:hover {
   align-items: center;
   flex-wrap: wrap;
   font-size: 2.4rem;
+  /* height: 1000px; */
+  /* margin-bottom: 0; */
 }
-
 
 .myInfo-container p {
   margin-top: 1vh;
@@ -100,7 +104,7 @@ li:hover {
   width: 30vw;
 }
 
-.myInfo-container span{
+.myInfo-container span {
   display: inline-block;
 }
 
@@ -111,9 +115,11 @@ li:hover {
   transition: all 0.4s;
   background-color: transparent;
   cursor: pointer;
+  position: relative;
 }
 .myInfo-container span.blast:hover {
-  color: rgb(25, 245, 170);
+  top: 15px;
+  color: var(--green);
   transform: rotate(-20deg) scale(1.3);
 }
 
@@ -129,10 +135,80 @@ li:hover {
   }
 }
 
+/* project page */
+
+#projectPage{
+  margin: 5% 0 5% 0;
+  border-top: 3px solid --green;
+  width: 100%;
+  overflow: hidden;
+}
+
+#projectPage > h1{
+  width: fit-content;
+  margin: auto;
+  margin-bottom: 5%;
+}
+
+
+.projectContainer {
+  display: flex;
+  height: 100%;
+  margin-bottom: 5%;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.projectAbout {
+  width: 40%;
+}
+
+.projectAbout p{
+  margin: 10px;
+}
+
+.projectAbout .buttons{
+  display: flex;
+  border-top: 1px solid gray;
+}
+
+.btn{
+width: 40%;
+margin: 10px auto;
+font-size: larger;
+border: 0;
+padding: 4px;
+}
+
+button.live{
+  background-color: var(--green) ;
+  color: #2d2c38;
+}
+button.github{
+  background-color: transparent ;
+  color: white;
+  border: 2px solid white;
+}
+
+.projectImage {
+  width: 50%;
+}
+
+.projectImage img {
+  width: 100%;
+}
+
 /* universal */
 
 .green {
   color: rgb(25, 245, 170);
+}
+
+a{
+  background-color: inherit;
+  color: inherit;
+  text-decoration: none;
 }
 
 /* media screen */
@@ -152,4 +228,24 @@ li:hover {
   .myInfo-container img {
     width: 40vw;
   }
+}
+@media screen and (max-width: 420px) {
+  .myInfo-container {
+    font-size: 1.4rem;
+  }
+}
+@media screen and (max-width: 1000px) {
+  .projectContainer{
+    flex-direction: column;
+    margin: 0;
+    margin-top: 10vh;
+  }
+  .projectAbout{
+    width: 80%;
+  }
+  .projectImage {
+    width: 80%;
+    margin-top: 10px;
+  }
+
 }

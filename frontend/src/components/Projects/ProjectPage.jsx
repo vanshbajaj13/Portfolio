@@ -6,7 +6,7 @@ import Project from "./Project";
 const ProjectPage = (props) => {
     return(
         <div  id='projectPage'>
-        <h1>My Project</h1>
+        <h1 className='heading'>My Project</h1>
         {projects.map((project) => {
             return (
               <Project

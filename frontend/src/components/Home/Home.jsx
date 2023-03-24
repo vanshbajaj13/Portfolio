@@ -1,14 +1,46 @@
 import picture from "../../asset/Images/IMG_1337.jpg";
 import Name from "./Name";
+import gsap from "gsap";
+import { useLayoutEffect } from "react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Home = () => {
-  const text1 = Array.from("I'm");
-  const text2 = Array.from(" Vansh");
+  gsap.registerPlugin(ScrollTrigger);
+  const text1 = Array.from("I'm ");
+  const text2 = Array.from("Vansh");
   const text3 = Array.from(" bajaj");
 
+  useLayoutEffect(() => {
+    const ctx = gsap.context(() => {
+      gsap.fromTo(
+        "#home",
+        {
+          scale: 1,
+        },
+        {
+          scale: 0.01,
+          rotate:180,
+          opacity:0,
+          scrollTrigger: {
+            trigger: "#home",
+            markers: true,
+            start: "50% center",
+            end: "bottom center",
+            scrub: 5,
+            pin: true,
+            pinSpacing:false,
+          },
+        }
+      );
+    });
+
+    return () => {
+      ctx.revert();
+    };
+  }, []);
   return (
     <div className="myInfo-container" id="home">
-    <div className="bgImg">
+      <div className="bgImg">
         <img src={picture} alt="my pic" />
       </div>
       <div className="nameTextDiv">
@@ -29,10 +61,14 @@ const Home = () => {
               return <Name char={ch} key={index} />;
             })}
           </span>
+          <span>
+            <span className="blast" id="v">
+              .
+            </span>
+          </span>
         </h1>
         <p>Full stack web developer</p>
       </div>
-      
     </div>
   );
 };

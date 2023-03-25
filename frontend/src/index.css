@@ -3,7 +3,7 @@
   color: white;
   font-family: "Dosis", sans-serif;
   margin: 0%;
-  scroll-behavior:smooth;
+  scroll-behavior: smooth;
   --green: rgb(25, 245, 170);
 }
 
@@ -17,7 +17,9 @@ body {
   height: 100vh;
 }
 
-
+#top {
+  overflow: hidden;
+}
 
 /* background */
 /* .background{
@@ -81,30 +83,33 @@ li:hover {
   color: var(--green);
 }
 
-
 /* About page */
 
-.aboutPage{
+.aboutPage {
   height: 100vh;
   width: 100%;
   border-top: 2px solid var(--green);
-
 }
 
-.aboutContainer{
+.aboutContainer {
   display: flex;
   flex-direction: column-reverse;
-  justify-content:space-between;
+  justify-content: space-between;
   align-items: center;
   /* padding:0 5% 0 5%; */
   height: 80%;
 }
 
-.aboutText{
+.aboutText {
   width: 85%;
 }
 
-.aboutTools{
+.aboutText p{
+  font-weight: 900;
+  font-size: 1.2rem;
+}
+
+.aboutTools {
   /* border : 2px solid var(--green); */
   width: 99%;
   height: 100%;
@@ -114,7 +119,7 @@ li:hover {
   align-items: flex-end;
 }
 
-.bubble{
+.bubble {
   width: fit-content;
   aspect-ratio: 1/1;
   /* min-width: 30px;
@@ -122,30 +127,22 @@ li:hover {
   background-color: transparent;
   border: 2px solid white;
   border-radius: 50px;
-  padding:20px;
+  padding: 20px;
   position: absolute;
   transition: all 1s;
-  box-shadow: inset 0 0 18px #fff, 
-                inset 6px 0 18px violet, 
-                inset -6px 0 18px #0ff, 
-                inset 6px 0 30px violet, 
-                inset -6px 0 30px #0ff, 
-                0 0 18px #fff, -4px 
-                0 18px violet, 4px 0 18px #0ff;
+  box-shadow: inset 0 0 18px #fff, inset 6px 0 18px violet,
+    inset -6px 0 18px #0ff, inset 6px 0 30px violet, inset -6px 0 30px #0ff,
+    0 0 18px #fff, -4px 0 18px violet, 4px 0 18px #0ff;
 }
 
-.bubble:hover{
-  box-shadow: inset 0 0 18px var(--green), 
-                inset 6px 0 18px var(--green), 
-                inset -6px 0 18px var(--green), 
-                inset 6px 0 30px var(--green), 
-                inset -6px 0 30px var(--green), 
-                0 0 18px #fff, -4px 
-                0 18px var(--green), 4px 0 18px var(--green);
+.bubble:hover {
+  box-shadow: inset 0 0 18px var(--green), inset 6px 0 18px var(--green),
+    inset -6px 0 18px var(--green), inset 6px 0 30px var(--green),
+    inset -6px 0 30px var(--green), 0 0 18px #fff, -4px 0 18px var(--green),
+    4px 0 18px var(--green);
 }
 
 /* name */
-
 
 .myInfo-container {
   display: flex;
@@ -156,8 +153,7 @@ li:hover {
   align-items: center;
   flex-wrap: wrap;
   font-size: 2.4rem;
-  width: 90%;
-  /* z-index: 5; */
+  width: 100%;
 }
 
 .myInfo-container p {
@@ -220,18 +216,17 @@ li:hover {
 
 /* project page */
 
-#projectPage{
+#projectPage {
   margin: 5% 0 5% 0;
   border-top: 3px solid var(--green);
   width: 100%;
   overflow: hidden;
 }
 
-.heading{
+.heading {
   width: fit-content;
   margin: 5% auto;
 }
-
 
 .projectContainer {
   display: flex;
@@ -246,41 +241,46 @@ li:hover {
   width: 40%;
 }
 
-.projectAbout p{
+.projectAbout p {
   margin: 10px;
 }
 
-.projectAbout .buttons{
+.projectAbout .buttons {
   display: flex;
   border-top: 1px solid gray;
 }
 
-.btn{
-width: 40%;
-margin: 10px auto;
-font-size: larger;
-border: 0;
-padding: 4px;
+.projectAbout a{
+  width: 40%;
+  margin: 10px auto;
+  border: 0;
 }
 
-button.live{
-  background-color: var(--green) ;
+.projectAbout .btn{
+  font-size: larger;
+  font-weight: 900;
+  padding: 7px;
+  width: 100%;
+}
+
+button.live {
+  background-color: var(--green);
   color: #2d2c38;
 }
 
-button.live:hover{
+button.live:hover {
   background-color: transparent;
   color: white;
   border: 2px solid white;
 }
 
-button.github{
-  background-color: transparent ;
+button.github {
+  background-color: transparent;
   color: white;
   border: 2px solid white;
 }
 
-button.github:hover{
+button.github:hover {
   background-color: transparent;
   color: var(--green);
   border: 2px solid var(--green);
@@ -294,13 +294,68 @@ button.github:hover{
   width: 100%;
 }
 
+/* contact me */
+.contactPage {
+  border-top: 3px solid var(--green);
+  display: flex;
+  width: 100%;
+  min-height: 50vh;
+  height: fit-content;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.contactContainer {
+  display: flex;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.contactPage a {
+  border: 3px solid white;
+  background-color: var(--green);
+  color: white;
+  font-weight: 900;
+  width: 28%;
+  aspect-ratio: 4/1;
+  padding: 10px;
+  transition: all 500;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactPage a:hover {
+  scale: 1.02;
+  box-shadow: 0 1px 13px 0 var(--green);
+}
+.contactContainer div {
+  background-color: transparent;
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.contactPage button {
+  background: transparent;
+  border: 0px;
+  font-weight: 900;
+  font-size: larger;
+}
+
+
 /* universal */
+svg{
+  border-radius: 10px;
+  background-color: var(--green);
+}
 
 .green {
   color: rgb(25, 245, 170);
 }
 
-a{
+a {
   background-color: inherit;
   color: inherit;
   text-decoration: none;
@@ -328,19 +383,34 @@ a{
   .myInfo-container {
     font-size: 1.4rem;
   }
+  header {
+    width: 100%;
+    left: 0%;
+  }
 }
 @media screen and (max-width: 1000px) {
-  .projectContainer{
+  .projectContainer {
     flex-direction: column;
     margin: 0;
     margin-top: 10vh;
   }
-  .projectAbout{
+  .projectAbout {
     width: 80%;
   }
   .projectImage {
     width: 80%;
     margin-top: 10px;
   }
-
+  .contactContainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+  }
+  .contactPage a {
+    font-size: 1.3rem;
+    width: 70%;
+    margin-top: 5%;
+  }
 }

@@ -24,7 +24,7 @@ const ProjectPage = (props) => {
               // markers: true,
               start: "-50% center",
               end: "center center",
-              scrub: true,
+              scrub: 5,
             },
           }
         );

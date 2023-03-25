@@ -1,4 +1,5 @@
 import About from "./components/About/About";
+import Contact from "./components/Contact/Contact";
 import Header from "./components/Header/Header";
 import Home from "./components/Home/Home";
 import ProjectPage from "./components/Projects/ProjectPage";
@@ -11,7 +12,7 @@ function App() {
       <Home />
       <About />
       <ProjectPage />
-      {/* <div className="background"></div> */}
+      <Contact />
     </div>
   );
 }

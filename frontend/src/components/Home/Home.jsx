@@ -1,4 +1,3 @@
-import picture from "../../asset/Images/IMG_1337.jpg";
 import Name from "./Name";
 import gsap from "gsap";
 import { useLayoutEffect } from "react";
@@ -23,6 +22,7 @@ const Home = () => {
           {
             opacity: 0,
             
+            
             scrollTrigger: {
               trigger: home,
               // markers: true,
@@ -44,7 +44,7 @@ const Home = () => {
   return (
     <div className="myInfo-container section" id="home">
       <div className="bgImg">
-        <img src={picture} alt="my pic" />
+        <img src="Images/IMG_1337.jpg" alt="my pic" />
       </div>
       <div className="nameTextDiv">
         <h1 className="green">Hii</h1>

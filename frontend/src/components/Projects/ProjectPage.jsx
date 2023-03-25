@@ -3,9 +3,9 @@ import { projects } from "../../data";
 import Project from "./Project";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const ProjectPage = (props) => {
-  gsap.registerPlugin(ScrollTrigger);
   useLayoutEffect(() => {
     let ctx = gsap.context(() => {
       gsap.utils.toArray(".projectAbout").forEach((pj) => {

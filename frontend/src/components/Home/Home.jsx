@@ -2,9 +2,9 @@ import Name from "./Name";
 import gsap from "gsap";
 import { useLayoutEffect } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
-  gsap.registerPlugin(ScrollTrigger);
   const text1 = Array.from("I'm ");
   const text2 = Array.from("Vansh");
   const text3 = Array.from(" bajaj");

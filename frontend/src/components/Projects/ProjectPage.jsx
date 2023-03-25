@@ -1,8 +1,7 @@
 import React, { useLayoutEffect } from "react";
 import { projects } from "../../data";
 import Project from "./Project";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { gsap, ScrollTrigger } from "gsap/all";
 
 const ProjectPage = (props) => {
   gsap.registerPlugin(ScrollTrigger);
@@ -18,7 +17,6 @@ const ProjectPage = (props) => {
           {
             x: 0,
             opacity: 1,
-            duration: 2,
             scrollTrigger: {
               trigger: pj,
               // markers: true,

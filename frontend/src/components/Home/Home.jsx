@@ -1,6 +1,7 @@
 import Name from "./Name";
+import gsap from "gsap";
 import { useLayoutEffect } from "react";
-import { gsap, ScrollTrigger } from "gsap/all";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const Home = () => {
   gsap.registerPlugin(ScrollTrigger);

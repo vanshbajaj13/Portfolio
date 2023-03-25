@@ -1,7 +1,8 @@
 import React, { useLayoutEffect } from "react";
 import { projects } from "../../data";
 import Project from "./Project";
-import { gsap, ScrollTrigger } from "gsap/all";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
 
 const ProjectPage = (props) => {
   gsap.registerPlugin(ScrollTrigger);

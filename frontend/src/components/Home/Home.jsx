@@ -12,26 +12,29 @@ const Home = () => {
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
-      gsap.fromTo(
-        "#home",
-        {
-          scale: 1,
-        },
-        {
-          scale: 0.01,
-          rotate:180,
-          opacity:0,
-          scrollTrigger: {
-            trigger: "#home",
-            markers: true,
-            start: "50% center",
-            end: "bottom center",
-            scrub: 5,
-            pin: true,
-            pinSpacing:false,
+      gsap.utils.toArray("#home").forEach((home) => {
+        console.log(home.offsetWidth);
+        // console.log(gsap.utils.("#home"));
+        gsap.fromTo(
+          home,
+          {
+            opacity: 1,
           },
-        }
-      );
+          {
+            opacity: 0,
+            
+            scrollTrigger: {
+              trigger: home,
+              // markers: true,
+              start: "center center",
+              end: () => "+=" + (home.offsetHeight * 2),
+              scrub: true,
+              pin: true,
+              pinSpacing: false,
+            },
+          }
+        );
+      });
     });
 
     return () => {
@@ -39,7 +42,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="myInfo-container" id="home">
+    <div className="myInfo-container section" id="home">
       <div className="bgImg">
         <img src={picture} alt="my pic" />
       </div>
@@ -60,11 +63,6 @@ const Home = () => {
             {text3.map((ch, index) => {
               return <Name char={ch} key={index} />;
             })}
-          </span>
-          <span>
-            <span className="blast" id="v">
-              .
-            </span>
           </span>
         </h1>
         <p>Full stack web developer</p>

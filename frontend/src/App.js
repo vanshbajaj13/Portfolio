@@ -5,13 +5,13 @@ import ProjectPage from "./components/Projects/ProjectPage";
 
 function App() {
   return (
-    <div className="App">
+    <div className="App" id="top">
       <div id="trailer"></div>
       <Header />
       <Home />
       <About />
       <ProjectPage />
-      <div style={{ height: "1000px" }}></div>
+      {/* <div className="background"></div> */}
     </div>
   );
 }

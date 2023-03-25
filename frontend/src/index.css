@@ -17,6 +17,22 @@ body {
   height: 100vh;
 }
 
+
+
+/* background */
+/* .background{
+  margin: auto;
+  width: 50%;
+  aspect-ratio: 1/1;
+  border: 3px solid gray;
+  border-radius: 100%;
+  z-index: -1;
+  background-color: transparent;
+  position: absolute;
+  top: 5%;
+  left: 25%;
+} */
+
 /* header */
 
 /* to toggle nav bar */
@@ -129,6 +145,8 @@ li:hover {
 }
 
 /* name */
+
+
 .myInfo-container {
   display: flex;
   height: fit-content;
@@ -138,6 +156,8 @@ li:hover {
   align-items: center;
   flex-wrap: wrap;
   font-size: 2.4rem;
+  width: 90%;
+  /* z-index: 5; */
 }
 
 .myInfo-container p {
@@ -247,10 +267,23 @@ button.live{
   background-color: var(--green) ;
   color: #2d2c38;
 }
+
+button.live:hover{
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
 button.github{
   background-color: transparent ;
   color: white;
   border: 2px solid white;
+}
+
+button.github:hover{
+  background-color: transparent;
+  color: var(--green);
+  border: 2px solid var(--green);
 }
 
 .projectImage {

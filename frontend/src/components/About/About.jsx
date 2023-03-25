@@ -44,7 +44,7 @@ const About = () => {
           duration: 1,
           ease: "none",
           repeat: -1,
-          paused : toggleAnimation,
+          paused: toggleAnimation,
           repeatRefresh: true, // gets a new random x and y value on each repeat
         });
       });
@@ -53,10 +53,10 @@ const About = () => {
         ctx.revert();
       };
     }
-  }, [screenSize,toggleAnimation]);
+  }, [screenSize, toggleAnimation]);
 
   return (
-    <div className="aboutPage" id="aboutMe">
+    <div className="aboutPage section" id="aboutMe">
       <h1 className="heading">About me</h1>
       <div className="aboutContainer">
         <div className="aboutTools" id="bubbleContainer">

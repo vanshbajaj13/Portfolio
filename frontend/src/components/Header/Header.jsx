@@ -20,7 +20,7 @@ const Header = () => {
       <header className={navBarToggle}>
         <ul>
           <li>
-            <a href="#home">Home</a>
+            <a href="#top">Home</a>
           </li>
           <li>
             <a href="#aboutMe">About</a>

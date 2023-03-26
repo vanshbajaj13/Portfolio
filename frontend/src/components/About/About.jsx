@@ -48,7 +48,7 @@ const About = () => {
   };
 
   function getRandomNumber(low, high) {
-    let r = Math.floor(Math.random() * (high - low + 1)) + low;
+    var r = Math.floor(Math.random() * (high - low + 1)) + low;
     return r;
   }
 

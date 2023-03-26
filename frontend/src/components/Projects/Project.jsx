@@ -1,8 +1,6 @@
 import React from "react";
 
 const Project = (props) => {
-  let img = props.image;
-  console.log(img);
   return (
     <div className="projectContainer project">
       <div className="projectAbout">

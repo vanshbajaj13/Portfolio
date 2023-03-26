@@ -1,60 +1,56 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import Bubbles from "./Bubbles";
-import gsap from "gsap";
 
 const About = () => {
-  const [screenSize, setScreenSize] = useState(null);
   window.onload = () => {
-    setScreenSize({
-      width: document.getElementById("bubbleContainer").clientWidth,
-      height: document.getElementById("bubbleContainer").clientHeight,
+    const bubbles = document.getElementsByClassName("bubble");
+    for (let i = 0; i < bubbles.length; i++) {
+      const bubble = bubbles[i];
+      bubble.addEventListener("mouseenter", (e) => {
+        setTimeout(()=>{
+            bubble.style.zIndex = -13;
+        },500)
+        setTimeout(() => {
+            bubble.style.zIndex = 1;
+        }, 2000);
     });
+      bubble.addEventListener("animationend", () => {
+        changePosition(bubble);
+      });
+    }
 
-    // const bubbles = document.getElementsByClassName("bubble");
-    // for (let i = 0; i < bubbles.length; i++) {
-    //   const bubble = bubbles[i];
-    //   bubble.addEventListener("mouseenter", (e) => {
-    //     setToggleAnimation(true);
-    //     console.log("enter");
-    //   });
-    //   bubble.addEventListener("mouseleave", (e) => {
-    //     setToggleAnimation(false);
-    //     console.log("leave");
-    //   });
-    // }
+    function changePosition(bubble) {
+
+      bubble.style.animationName = "none";
+
+      requestAnimationFrame(() => {
+        bubble.style.animationName = "";
+      });
+      const bubbleStyle = getComputedStyle(bubble);
+
+      var curX = bubbleStyle.getPropertyValue("--xB");
+      var curY = bubbleStyle.getPropertyValue("--yB");
+
+      bubble.style.setProperty("--xA", curX);
+      bubble.style.setProperty("--yA", curY);
+
+      bubble.style.setProperty(
+        "--xB",
+        getRandomNumber(-window.innerWidth / 2, window.innerWidth / 2 - 60) +
+          "px"
+      );
+
+      bubble.style.setProperty(
+        "--yB",
+        getRandomNumber(-window.innerHeight + 60, 0) + "px"
+      );
+    }
   };
 
-  window.addEventListener("resize", (e) => {
-    setScreenSize({
-      width: document.getElementById("bubbleContainer").clientWidth,
-      height: document.getElementById("bubbleContainer").clientHeight,
-    });
-  });
-
-  //   translate3d(-18.76px, -297.24px, 0px) rotate(306.598deg)
-  useEffect(() => {
-    if (screenSize) {
-      const ctx = gsap.context(() => {
-        gsap.utils.toArray(".bubble").forEach((bubble) => {
-          gsap.to(bubble, {
-            x: `random(-${screenSize.width / 2 - 60},${
-              screenSize.width / 2 - 60
-            },5)`, //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
-            y: `random(0,-${screenSize.height - 60},5)`,
-            rotate: `random(-360,360)`,
-            duration: 1,
-            ease: "none",
-            repeat: -1,
-            repeatRefresh: true, // gets a new random x and y value on each repeat
-          });
-        });
-      });
-
-      return () => {
-        ctx.revert();
-      };
-    }
-  }, [screenSize]);
+  function getRandomNumber(low, high) {
+    let r = Math.floor(Math.random() * (high - low + 1)) + low;
+    return r;
+  }
 
   return (
     <div className="aboutPage section" id="aboutMe">

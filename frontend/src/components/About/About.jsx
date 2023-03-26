@@ -1,58 +1,107 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Bubbles from "./Bubbles";
 
 const About = () => {
-  window.onload = () => {
-    alert("on load started");
-    const bubbles = document.getElementsByClassName("bubble");
-    for (let i = 0; i < bubbles.length; i++) {
-      const bubble = bubbles[i];
-      bubble.addEventListener("mouseenter", () => {
-        setTimeout(()=>{
-            bubble.style.zIndex = -13;
-        },500)
-        setTimeout(() => {
-            bubble.style.zIndex = 1;
-        }, 2000);
-    });
-      bubble.addEventListener("animationend", () => {
-        alert("animationed event bined");
-        changePosition(bubble);
-      });
-    }
 
-    function changePosition(bubble) {
-        alert("changePosition funtion runnnig");
+    useEffect(() => {
+        // alert("on load started");
+        const bubbles = document.getElementsByClassName("bubble");
+        for (let i = 0; i < bubbles.length; i++) {
+          const bubble = bubbles[i];
+          bubble.addEventListener("mouseenter", () => {
+            setTimeout(()=>{
+                bubble.style.zIndex = -13;
+            },500)
+            setTimeout(() => {
+                bubble.style.zIndex = 1;
+            }, 2000);
+        });
+          bubble.addEventListener("animationend", () => {
+            alert("animationed event bined");
+            changePosition(bubble);
+          });
+        }
+    
+        function changePosition(bubble) {
+            alert("changePosition funtion runnnig");
+    
+          bubble.style.animationName = "none";
+    
+          requestAnimationFrame(() => {
+            bubble.style.animationName = "";
+          });
+          const bubbleStyle = getComputedStyle(bubble);
+    
+          var curX = bubbleStyle.getPropertyValue("--xB");
+          var curY = bubbleStyle.getPropertyValue("--yB");
+    
+          bubble.style.setProperty("--xA", curX);
+          bubble.style.setProperty("--yA", curY);
+    
+          bubble.style.setProperty(
+            "--xB",
+            getRandomNumber(-window.innerWidth / 2, window.innerWidth / 2 - 60) +
+              "px"
+          );
+    
+          bubble.style.setProperty(
+            "--yB",
+            getRandomNumber(-window.innerHeight + 60, 0) + "px"
+          );
+        }
+    }, [])
+    
+//   window.onload = () => {
+//     alert("on load started");
+//     const bubbles = document.getElementsByClassName("bubble");
+//     for (let i = 0; i < bubbles.length; i++) {
+//       const bubble = bubbles[i];
+//       bubble.addEventListener("mouseenter", () => {
+//         setTimeout(()=>{
+//             bubble.style.zIndex = -13;
+//         },500)
+//         setTimeout(() => {
+//             bubble.style.zIndex = 1;
+//         }, 2000);
+//     });
+//       bubble.addEventListener("animationend", () => {
+//         alert("animationed event bined");
+//         changePosition(bubble);
+//       });
+//     }
 
-      bubble.style.animationName = "none";
+//     function changePosition(bubble) {
+//         alert("changePosition funtion runnnig");
 
-      requestAnimationFrame(() => {
-        bubble.style.animationName = "";
-      });
-      const bubbleStyle = getComputedStyle(bubble);
+//       bubble.style.animationName = "none";
 
-      var curX = bubbleStyle.getPropertyValue("--xB");
-      var curY = bubbleStyle.getPropertyValue("--yB");
+//       requestAnimationFrame(() => {
+//         bubble.style.animationName = "";
+//       });
+//       const bubbleStyle = getComputedStyle(bubble);
 
-      bubble.style.setProperty("--xA", curX);
-      bubble.style.setProperty("--yA", curY);
+//       var curX = bubbleStyle.getPropertyValue("--xB");
+//       var curY = bubbleStyle.getPropertyValue("--yB");
 
-      bubble.style.setProperty(
-        "--xB",
-        getRandomNumber(-window.innerWidth / 2, window.innerWidth / 2 - 60) +
-          "px"
-      );
+//       bubble.style.setProperty("--xA", curX);
+//       bubble.style.setProperty("--yA", curY);
 
-      bubble.style.setProperty(
-        "--yB",
-        getRandomNumber(-window.innerHeight + 60, 0) + "px"
-      );
-    }
-  };
+//       bubble.style.setProperty(
+//         "--xB",
+//         getRandomNumber(-window.innerWidth / 2, window.innerWidth / 2 - 60) +
+//           "px"
+//       );
+
+//       bubble.style.setProperty(
+//         "--yB",
+//         getRandomNumber(-window.innerHeight + 60, 0) + "px"
+//       );
+//     }
+//   };
 
   function getRandomNumber(low, high) {
     var r = Math.floor(Math.random() * (high - low + 1)) + low;
-    alert("r value return = " + r);
+    // alert("r value return = " + r);
     return r;
   }
 

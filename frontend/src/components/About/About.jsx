@@ -4,25 +4,24 @@ import gsap from "gsap";
 
 const About = () => {
   const [screenSize, setScreenSize] = useState(null);
-  const [toggleAnimation, setToggleAnimation] = useState(false);
   window.onload = () => {
     setScreenSize({
       width: document.getElementById("bubbleContainer").clientWidth,
       height: document.getElementById("bubbleContainer").clientHeight,
     });
 
-    const bubbles = document.getElementsByClassName("bubble");
-    for (let i = 0; i < bubbles.length; i++) {
-      const bubble = bubbles[i];
-      bubble.addEventListener("mouseenter", (e) => {
-        setToggleAnimation(true);
-        console.log("enter");
-      });
-      bubble.addEventListener("mouseleave", (e) => {
-        setToggleAnimation(false);
-        console.log("leave");
-      });
-    }
+    // const bubbles = document.getElementsByClassName("bubble");
+    // for (let i = 0; i < bubbles.length; i++) {
+    //   const bubble = bubbles[i];
+    //   bubble.addEventListener("mouseenter", (e) => {
+    //     setToggleAnimation(true);
+    //     console.log("enter");
+    //   });
+    //   bubble.addEventListener("mouseleave", (e) => {
+    //     setToggleAnimation(false);
+    //     console.log("leave");
+    //   });
+    // }
   };
 
   window.addEventListener("resize", (e) => {
@@ -44,7 +43,6 @@ const About = () => {
           duration: 1,
           ease: "none",
           repeat: -1,
-          paused: toggleAnimation,
           repeatRefresh: true, // gets a new random x and y value on each repeat
         });
       });
@@ -53,7 +51,7 @@ const About = () => {
         ctx.revert();
       };
     }
-  }, [screenSize, toggleAnimation]);
+  }, [screenSize]);
 
   return (
     <div className="aboutPage section" id="aboutMe">

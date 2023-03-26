@@ -12,8 +12,6 @@ const Home = () => {
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray("#home").forEach((home) => {
-        console.log(home.offsetWidth);
-        // console.log(gsap.utils.("#home"));
         gsap.fromTo(
           home,
           {

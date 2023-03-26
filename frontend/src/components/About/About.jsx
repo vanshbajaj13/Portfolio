@@ -3,10 +3,11 @@ import Bubbles from "./Bubbles";
 
 const About = () => {
   window.onload = () => {
+    console.log("on load started");
     const bubbles = document.getElementsByClassName("bubble");
     for (let i = 0; i < bubbles.length; i++) {
       const bubble = bubbles[i];
-      bubble.addEventListener("mouseenter", (e) => {
+      bubble.addEventListener("mouseenter", () => {
         setTimeout(()=>{
             bubble.style.zIndex = -13;
         },500)
@@ -15,11 +16,13 @@ const About = () => {
         }, 2000);
     });
       bubble.addEventListener("animationend", () => {
+        console.log("animationed event bined");
         changePosition(bubble);
       });
     }
 
     function changePosition(bubble) {
+        console.log("changePosition funtion runnnig");
 
       bubble.style.animationName = "none";
 
@@ -49,6 +52,7 @@ const About = () => {
 
   function getRandomNumber(low, high) {
     var r = Math.floor(Math.random() * (high - low + 1)) + low;
+    console.log("r value return = " + r);
     return r;
   }
 

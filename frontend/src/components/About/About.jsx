@@ -31,19 +31,22 @@ const About = () => {
     });
   });
 
+  //   translate3d(-18.76px, -297.24px, 0px) rotate(306.598deg)
   useEffect(() => {
     if (screenSize) {
       const ctx = gsap.context(() => {
-        gsap.to(".bubble", {
-          x: `random(-${screenSize.width / 2 - 60},${
-            screenSize.width / 2 - 60
-          },5)`, //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
-          y: `random(0,-${screenSize.height - 60},5)`,
-          rotate: `random(-360,360)`,
-          duration: 1,
-          ease: "none",
-          repeat: -1,
-          repeatRefresh: true, // gets a new random x and y value on each repeat
+        gsap.utils.toArray(".bubble").forEach((bubble) => {
+          gsap.to(bubble, {
+            x: `random(-${screenSize.width / 2 - 60},${
+              screenSize.width / 2 - 60
+            },5)`, //chooses a random number between -20 and 20 for each target, rounding to the closest 5!
+            y: `random(0,-${screenSize.height - 60},5)`,
+            rotate: `random(-360,360)`,
+            duration: 1,
+            ease: "none",
+            repeat: -1,
+            repeatRefresh: true, // gets a new random x and y value on each repeat
+          });
         });
       });
 

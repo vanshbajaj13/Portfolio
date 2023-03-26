@@ -9,16 +9,18 @@ const Home = () => {
   const text2 = Array.from("Vansh");
   const text3 = Array.from(" bajaj");
 
+  
+
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray("#home").forEach((home) => {
         gsap.fromTo(
           home,
           {
-            opacity: 1,
+            autoAlpha: 1,
           },
           {
-            opacity: 0,
+            autoAlpha: 0,
             
             
             scrollTrigger: {

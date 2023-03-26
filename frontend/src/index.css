@@ -88,7 +88,6 @@ li:hover {
 .myInfo-container {
   display: flex;
   height: fit-content;
-  height: -moz-fit-content;
   min-height: 100vh;
   justify-content: space-between;
   padding: 2vw;
@@ -194,7 +193,6 @@ li:hover {
 
 .bubble {
   width: fit-content;
-  width: -moz-fit-content;
   aspect-ratio: 1/1;
   background-color: transparent;
   border: 2px solid white;
@@ -252,7 +250,6 @@ li:hover {
 
 .heading {
   width: fit-content;
-  width: -moz-fit-content;
   margin: 5% auto;
 }
 
@@ -329,7 +326,6 @@ button.github:hover {
   width: 100%;
   min-height: 50vh;
   height: fit-content;
-  height: -moz-fit-content;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;

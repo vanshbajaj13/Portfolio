@@ -29,6 +29,7 @@ const Home = () => {
               scrub: true,
               pin: true,
               pinSpacing: false,
+              onLeave:()=>ScrollTrigger.clearScrollMemory(),
             },
           }
         );

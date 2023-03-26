@@ -24,6 +24,7 @@ const ProjectPage = (props) => {
               start: "-50% center",
               end: "center center",
               scrub: 5,
+              onLeave: () => ScrollTrigger.clearScrollMemory(),
             },
           }
         );
@@ -46,6 +47,7 @@ const ProjectPage = (props) => {
               start: "-50% center",
               end: "center center",
               scrub: 10,
+              onLeave: () => ScrollTrigger.clearScrollMemory(),
             },
           }
         );
@@ -64,8 +66,8 @@ const ProjectPage = (props) => {
             title={project.title}
             description={project.description}
             image={project.Image}
-            website = {project.website}
-            github = {project.github}
+            website={project.website}
+            github={project.github}
           />
         );
       })}

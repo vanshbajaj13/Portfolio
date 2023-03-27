@@ -6,6 +6,10 @@ const Project = (props) => {
       <div className="projectAbout">
         <h1 className="green">{props.title}</h1>
         <p>{props.description}</p>
+        {props.account && <>
+        <p>Account - <span>{props.account}</span></p>
+        <p>Password - <span>{props.password}</span></p>
+        </>}
         <div className="buttons">
           <a href={props.website} target="_blank" rel="noreferrer">
             <button className="btn live green">

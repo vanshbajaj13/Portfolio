@@ -40,13 +40,13 @@ const ProjectPage = (props) => {
             x: 0,
             opacity: 1,
             duration: 2,
-            ease: "circ",
+            // ease: "circ",
             scrollTrigger: {
               trigger: pjImg,
               // markers: true,
               start: "-50% center",
               end: "center center",
-              scrub: 10,
+              scrub: 6,
               onLeave: () => ScrollTrigger.clearScrollMemory(),
             },
           }
@@ -58,7 +58,7 @@ const ProjectPage = (props) => {
   }, []);
   return (
     <div id="projectPage" className="section">
-      <h1 className="heading">My Project</h1>
+      <h1 className="heading">My Projects</h1>
       {projects.map((project) => {
         return (
           <Project
@@ -68,6 +68,8 @@ const ProjectPage = (props) => {
             image={project.Image}
             website={project.website}
             github={project.github}
+            account={project.account}
+            password={project.password}
           />
         );
       })}

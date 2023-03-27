@@ -2,10 +2,12 @@ export const projects = [
     {   
         id : 1,
         title: "Peaky parcel",
-        description: "Don't have time to collect your parcel, don't worry with the help of our website PeakyParcel you can sign-up for free and add your parcel request. People can choose to accept your request and collect your parcel for you. You can contact the person with whatsapp \nI had used MERN stack for this project.Use demo account to login.\nEAMIL -> demo@example.com\n PASSWORD -> 12341234",
+        description: "Don't have time to collect your parcel ? Don't worry with the help of our website PeakyParcel you can sign-up for free and add your parcel request. People can choose to accept your request and collect your parcel for you. You can contact the person with whatsapp \nI had used MERN stack for this project.Use demo account to login.",
         Image : "peakParcel.png",
         website : "https://peakyparcel.onrender.com/",
-        github : "https://github.com/vanshbajaj13/PeakyParsel"
+        github : "https://github.com/vanshbajaj13/PeakyParsel",
+        account : "demo@example.com",
+        password : "12345678"
     },
     { 
         id : 2,

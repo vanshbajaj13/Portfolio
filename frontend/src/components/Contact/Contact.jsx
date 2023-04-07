@@ -4,6 +4,7 @@ const Contact = () => {
   return (
     <div className="section contactPage" id="contactMe">
       <div>
+        memogy
         <img width="150px" src="Images/memoji.png" alt="memoji"></img>
       </div>
       <h1>Contact Me</h1>

@@ -23,7 +23,8 @@ const ProjectPage = (props) => {
               // markers: true,
               start: "-50% center",
               end: "center center",
-              scrub: 5,
+              scrub: true,
+              anticipatePin:true,
               onLeave: () => ScrollTrigger.clearScrollMemory(),
             },
           }
@@ -46,7 +47,8 @@ const ProjectPage = (props) => {
               // markers: true,
               start: "-50% center",
               end: "center center",
-              scrub: 6,
+              scrub: 1,
+              anticipatePin:true,
               onLeave: () => ScrollTrigger.clearScrollMemory(),
             },
           }

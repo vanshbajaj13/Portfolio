@@ -24,6 +24,7 @@ const Project = (props) => {
         </div>
       </div>
       <div className="projectImage">
+      {/* <iframe src={props.website} title={props.title}></iframe> */}
         <img  src={`Images/${props.image}`} alt="project " />
       </div>
     </div>

@@ -121,19 +121,20 @@ li:hover {
 
 .myInfo-container span {
   display: inline-block;
+  margin-right: 20px;
 }
 
 .myInfo-container span.blast {
-  /* font-family: 'Braah One', sans-serif; */
-  /* text-transform: uppercase; */
-  margin: 2px;
+  font-family: "Braah One", sans-serif;
+  text-transform: uppercase;
+  margin: 0px;
   display: inline-block;
   min-width: 10px;
   transition: all 0.4s;
   background-color: transparent;
   cursor: pointer;
   position: relative;
-  /* text-shadow: 1px 1px 1px #919191,
+  text-shadow: 1px 1px 1px #919191,
         1px 2px 1px #919191,
         1px 3px 1px #919191,
         1px 4px 1px #919191,
@@ -143,19 +144,18 @@ li:hover {
         1px 8px 1px #919191,
         1px 9px 1px #919191,
         1px 10px 1px #919191,
-    1px 18px 6px rgba(16,16,16,0.4),
-    1px 22px 10px rgba(16,16,16,0.2),
-    1px 25px 35px rgba(16,16,16,0.2),
-    1px 30px 60px rgba(16,16,16,0.4); */
+    1px 18px 6px rgba(85, 87, 78, 0.4),
+    1px 22px 10px rgba(72, 72, 72,0.2),
+    1px 25px 35px rgba(72, 72, 72,0.2),
+    1px 30px 60px rgba(72, 72, 72,0.4);
 }
 
 .rubber{
   animation: rubberBand linear 1s;
 }
 
-.rubber:hover{
+.blast:hover{
   color: var(--green);
-  /* color: var(--teel) !important; */
 }
 
 @keyframes rubberBand {
@@ -383,6 +383,10 @@ button.github:hover {
 .projectImage img {
   width: 100%;
 }
+.projectImage iframe {
+  width: 100%;
+  min-height: 50vh;
+}
 
 /* contact me */
 .contactPage {
@@ -452,6 +456,13 @@ a {
 
 /* media screen */
 
+@media screen and (max-width: 700px){
+  .myInfo-container span {
+    font-size: smaller;
+  }
+
+}
+
 @media screen and (max-width: 660px) {
   .myInfo-container {
     font-size: 1.8rem;
@@ -467,6 +478,8 @@ a {
   .myInfo-container img {
     width: 40vw;
   }
+
+
 }
 @media screen and (max-width: 420px) {
   .myInfo-container {

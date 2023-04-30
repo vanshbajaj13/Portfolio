@@ -37,6 +37,16 @@ const Home = () => {
         );
       });
     });
+    const chars = document.getElementsByClassName("blast");
+    setInterval(()=>{
+      var it = Math.floor(Math.random()*(chars.length));
+      chars[it].classList.add("rubber");
+      // console.log(it);
+      setTimeout(() => {
+        chars[it].classList.remove("rubber");
+        // console.log("done");
+      }, 1000);
+    },1500)
 
     return () => {
       ctx.revert();

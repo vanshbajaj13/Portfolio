@@ -11,6 +11,14 @@ export const projects = [
     },
     { 
         id : 2,
+        title: "Mercury Classes",
+        description: "Mercury Classes is an education institute that offers a wide range of programs to help students achieve their academic goals. As a web developer, I had the opportunity to create an impressive website that accurately represents their brand and services. My skills in website development and attention to detail allowed me to design and develop a user-friendly website that showcases their programs and services in an engaging manner.",
+        Image : "MercuryClasses.png",
+        website : "https://hgclasses.onrender.com/",
+        github : "https://github.com/vanshbajaj13/Mercury-Classes"
+    },
+    { 
+        id : 3,
         title: "Orange",
         description: "I made this website when i just started lerning web development, this is my first website ever. I used CSS and HTML only for this website.",
         Image : "orange.png",

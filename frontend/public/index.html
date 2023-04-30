@@ -15,11 +15,12 @@
       /* Loader */
 
       * {
-        font-family: "Rubik", sans-serif;
+        background-color: #2d2c38;
+        color: white;
+        font-family: "Dosis", sans-serif;
         margin: 0%;
-        --teel: teal;
-        box-sizing: border-box;
-        scroll-behavior: smooth;
+        /* scroll-behavior: smooth; */
+        --green: rgb(25, 245, 170);
       }
       .loader {
         margin: 0%;
@@ -35,15 +36,18 @@
       .loader h1 {
         position: absolute;
         font-size: 20vh;
+        background: transparent;
         color: white;
       }
       .sk-chase {
+        background: black;
         padding: 10vh;
         position: relative;
         animation: sk-chase 2.5s infinite linear both;
       }
-
+      
       .sk-chase-dot {
+        background: black;
         width: 100%;
         height: 100%;
         position: absolute;
@@ -126,11 +130,15 @@
         position: absolute;
         font-size: 20px;
         color: gray;
+        background-color: black;
         bottom: 10%;
         /* border: 3px solid red; */
         width: 100vw;
         text-align: center;
         animation: 4s anim-lineUp ease-in infinite;
+      }
+      .quote h3{
+        background-color: black;
       }
 
       @keyframes anim-lineUp {
@@ -173,7 +181,7 @@
         <h1>V</h1>
       </div>
       <div class="quote">
-        <h3>- Vansh Bajaj</h3>
+        <h3>~ Vansh Bajaj</h3>
       </div>
     </div>
   </body>

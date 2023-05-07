@@ -1,6 +1,6 @@
 import Name from "./Name";
 import gsap from "gsap";
-import { useLayoutEffect } from "react";
+import { useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 gsap.registerPlugin(ScrollTrigger);
 
@@ -9,7 +9,7 @@ const Home = () => {
   const text2 = Array.from("Vansh");
   const text3 = Array.from(" bajaj");
 
-  
+  const [loaded, setLoaded] = useState(false);  
 
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
@@ -55,7 +55,8 @@ const Home = () => {
   return (
     <div className="myInfo-container section" id="home">
       <div className="bgImg">
-        <img src="Images/IMG_1337.jpg" alt="my pic" />
+        <img src="Images/IMG_1337.jpg" alt="my pic" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}}/>
+        <img src="Images/bg.svg" alt="my pic" style={loaded ? {display: 'none'} : {}}/> 
       </div>
       <div className="nameTextDiv">
         <h1 className="green">Hii</h1>

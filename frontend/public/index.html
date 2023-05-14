@@ -32,28 +32,105 @@
         width: 100%;
         height: 100%;
       }
+      .inner {
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
+        width: 30vh;
+        aspect-ratio: 1/1;
+        border-radius: 50%;
+        background-color: transparent;
+        position: absolute;
+        animation-duration: 1s;
+        animation-timing-function: linear;
+        animation-delay: 0s;
+        animation-iteration-count: infinite;
+        animation-direction: normal;
+        animation-fill-mode: none;
+        animation-play-state: running;
+        border-top: 4px solid currentColor;
+      }
+      .loader .one {
+        border-top: 2px solid var(--green);
+        -webkit-animation: rotate-one 1s linear infinite;
+        animation: rotate-one 1s linear infinite;
+        animation-name: rotate-one;
+      }
+      .loader .two {
+        border-right: 2px solid var(--green);
+        -webkit-animation: rotate-two 1s linear infinite;
+        animation: rotate-two 1s linear infinite;
+        animation-name: rotate-two;
+      }
+      .loader .three {
+        border-bottom: 2px solid var(--green);
+        -webkit-animation: rotate-three 1s linear infinite;
+        animation: rotate-three 1s linear infinite;
+        animation-name: rotate-three;
+      }
 
+      @keyframes rotate-one {
+        0% {
+          -webkit-transform: rotateX(35deg) rotateY(-45deg) rotate(0deg);
+          transform: rotateX(35deg) rotateY(-45deg) rotate(0deg);
+        }
+
+        100% {
+          -webkit-transform: rotateX(35deg) rotateY(-45deg) rotate(1turn);
+          transform: rotateX(35deg) rotateY(-45deg) rotate(1turn);
+        }
+      }
+
+      @keyframes rotate-two {
+        0% {
+          -webkit-transform: rotateX(50deg) rotateY(10deg) rotate(0deg);
+          transform: rotateX(50deg) rotateY(10deg) rotate(0deg);
+        }
+
+        100% {
+          -webkit-transform: rotateX(50deg) rotateY(10deg) rotate(1turn);
+          transform: rotateX(50deg) rotateY(10deg) rotate(1turn);
+        }
+      }
+
+      @keyframes rotate-three {
+        0% {
+          -webkit-transform: rotateX(35deg) rotateY(55deg) rotate(0deg);
+          transform: rotateX(35deg) rotateY(55deg) rotate(0deg);
+        }
+
+        100% {
+          -webkit-transform: rotateX(35deg) rotateY(55deg) rotate(1turn);
+          transform: rotateX(35deg) rotateY(55deg) rotate(1turn);
+        }
+      }
       .loader h1 {
         position: absolute;
-        font-size: 20vh;
+        font-size: 18vh;
         background: transparent;
         color: white;
       }
       .sk-chase {
-        background: black;
+        z-index: 1;
+        background: transparent;
         padding: 10vh;
         position: relative;
-        animation: sk-chase 2.5s infinite linear both;
+        /* animation: sk-chase 2.5s infinite linear both; */
+        -webkit-animation: rotate-two 4s linear infinite;
+        animation: rotate-two 4s linear infinite;
+        animation-name: rotate-two;
       }
-      
+
       .sk-chase-dot {
-        background: black;
+        background: transparent;
         width: 100%;
         height: 100%;
         position: absolute;
         left: 0;
         top: 0;
-        animation: sk-chase-dot 4s infinite ease-in-out both;
+        /* animation: sk-chase-dot 4s infinite ease-in-out both; */
+        -webkit-animation: rotate-two 4s linear infinite;
+        animation: rotate-two 4s linear infinite;
+        animation-name: rotate-two;
       }
 
       .sk-chase-dot:before {
@@ -132,12 +209,11 @@
         color: gray;
         background-color: black;
         bottom: 10%;
-        /* border: 3px solid red; */
         width: 100vw;
         text-align: center;
         animation: 4s anim-lineUp ease-in infinite;
       }
-      .quote h3{
+      .quote h3 {
         background-color: black;
       }
 
@@ -178,6 +254,11 @@
           <div class="sk-chase-dot"></div>
           <div class="sk-chase-dot"></div>
         </div>
+      </div>
+      <div class="loader">
+        <div class="inner one"></div>
+        <div class="inner two"></div>
+        <div class="inner three"></div>
         <h1>V</h1>
       </div>
       <div class="quote">

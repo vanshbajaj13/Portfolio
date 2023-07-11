@@ -6,14 +6,14 @@ import ProjectPage from "./components/Projects/ProjectPage";
 
 function App() {
   return (
-    <div className="App" id="top">
-      <div id="trailer"></div>
-      <Header />
-      <Home />
-      <About />
-      <ProjectPage />
-      <Contact />
-    </div>
+        <div className="App" id="top">
+          <div id="trailer"></div>
+          <Header />
+          <Home />
+          <About />
+          <ProjectPage />
+          <Contact />
+        </div>
   );
 }
 

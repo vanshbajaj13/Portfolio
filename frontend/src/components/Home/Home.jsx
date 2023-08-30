@@ -13,7 +13,7 @@ const Home = () => {
   const [imgTop, setImgTop] = useState(true);
   function genRandomImg() {
     let x =  Math.floor(Math.random()*100);
-    console.log(x);
+    // console.log(x);
     if (x%2 === 0) {
       setImgTop((pv)=>{
         return !pv;
@@ -66,7 +66,7 @@ const Home = () => {
     <div className="myInfo-container section" id="home">
       <div className="bgImg">
         {imgTop ? 
-        <img src="Images/Pic.jpg" alt="my pic" className="imgTop" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} onMouseOver={()=>{genRandomImg()}} />
+        <img src="Images/IMG_1336.jpg" alt="my pic" className="imgTop" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} onMouseOver={()=>{genRandomImg()}} />
         :
         <img src="Images/IMG_1337.jpg" className="imgTop" alt="my pic" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} onMouseOver={()=>{genRandomImg()}}/>
         }

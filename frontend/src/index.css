@@ -135,27 +135,19 @@ li:hover {
   background-color: transparent;
   cursor: pointer;
   position: relative;
-  text-shadow: 1px 1px 1px #919191,
-        1px 2px 1px #919191,
-        1px 3px 1px #919191,
-        1px 4px 1px #919191,
-        1px 5px 1px #919191,
-        1px 6px 1px #919191,
-        1px 7px 1px #919191,
-        1px 8px 1px #919191,
-        1px 9px 1px #919191,
-        1px 10px 1px #919191,
-    1px 18px 6px rgba(85, 87, 78, 0.4),
-    1px 22px 10px rgba(72, 72, 72,0.2),
-    1px 25px 35px rgba(72, 72, 72,0.2),
-    1px 30px 60px rgba(72, 72, 72,0.4);
+  text-shadow: 1px 1px 1px #919191, 1px 2px 1px #919191, 1px 3px 1px #919191,
+    1px 4px 1px #919191, 1px 5px 1px #919191, 1px 6px 1px #919191,
+    1px 7px 1px #919191, 1px 8px 1px #919191, 1px 9px 1px #919191,
+    1px 10px 1px #919191, 1px 18px 6px rgba(85, 87, 78, 0.4),
+    1px 22px 10px rgba(72, 72, 72, 0.2), 1px 25px 35px rgba(72, 72, 72, 0.2),
+    1px 30px 60px rgba(72, 72, 72, 0.4);
 }
 
-.rubber{
+.rubber {
   animation: rubberBand linear 1s;
 }
 
-.blast:hover{
+.blast:hover {
   color: var(--green);
 }
 
@@ -177,18 +169,17 @@ li:hover {
   }
 
   65% {
-    transform: scale3d(.95, 1.05, 1);
+    transform: scale3d(0.95, 1.05, 1);
   }
 
   75% {
-    transform: scale3d(1.05, .95, 1);
+    transform: scale3d(1.05, 0.95, 1);
   }
 
   to {
     transform: scale3d(1, 1, 1);
   }
 }
-
 
 @keyframes rotate {
   0% {
@@ -204,7 +195,7 @@ li:hover {
 
 /* About page */
 
-.aboutSection{
+.aboutSection {
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -216,7 +207,7 @@ li:hover {
   border-top: 2px solid var(--green);
 }
 
-.scoreBoard{
+.scoreBoard {
   padding: 20px;
   display: flex;
   flex-direction: column;
@@ -258,7 +249,10 @@ li:hover {
 }
 
 .bubble {
-  width: fit-content;
+  width: max-content;
+  width: intrinsic;           /* Safari/WebKit uses a non-standard name */
+  width: -moz-max-content;    /* Firefox/Gecko */
+  width: -webkit-max-content; /* Chrome */
   aspect-ratio: 1/1;
   background-color: transparent;
   border: 2px solid white;
@@ -275,12 +269,12 @@ li:hover {
     0 0 18px #fff, -4px 0 18px violet, 4px 0 18px #0ff;
 }
 
-.bubble p{
+.bubble p {
   background: transparent;
-  animation: 5s anim-lineUp ease-in infinite;
+  /* animation: 5s anim-lineUp ease-in infinite; */
 }
 
-.bubbleMove{
+.bubbleMove {
   --xA: -100%;
   --yA: -500%;
   --xB: -300%;
@@ -306,11 +300,15 @@ li:hover {
 
 .bubble:hover {
   color: var(--green);
+  -webkit-animation-play-state:paused;
+  -moz-animation-play-state:paused;
+  -o-animation-play-state:paused;
+  animation-play-state:paused;
   box-shadow: inset 0 0 18px var(--green), inset 6px 0 18px var(--green),
     inset -6px 0 18px var(--green), inset 6px 0 30px var(--green),
     inset -6px 0 30px var(--green), 0 0 18px #fff, -4px 0 18px var(--green),
     4px 0 18px var(--green);
-}
+  }
 
 /* project page */
 
@@ -464,11 +462,10 @@ a {
 
 /* media screen */
 
-@media screen and (max-width: 700px){
+@media screen and (max-width: 700px) {
   .myInfo-container span {
     font-size: smaller;
   }
-
 }
 
 @media screen and (max-width: 660px) {
@@ -486,8 +483,6 @@ a {
   .myInfo-container img {
     width: 40vw;
   }
-
-
 }
 @media screen and (max-width: 420px) {
   .myInfo-container {

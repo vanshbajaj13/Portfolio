@@ -7,12 +7,12 @@ const About = () => {
     const bubbles = document.getElementsByClassName("bubble");
     for (let i = 0; i < bubbles.length; i++) {
       const bubble = bubbles[i];
-      bubble.addEventListener("mouseenter", () => {
+      bubble.addEventListener("mouseleave", () => {
         setScore((value)=>{
             return value += 1;
         });
+        bubble.style.zIndex = -13;
         setTimeout(() => {
-          bubble.style.zIndex = -13;
         }, 500);
         setTimeout(() => {
           bubble.style.zIndex = 1;

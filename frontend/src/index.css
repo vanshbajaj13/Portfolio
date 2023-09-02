@@ -254,19 +254,6 @@ li:hover {
   width: -moz-max-content;    /* Firefox/Gecko */
   width: -webkit-max-content; /* Chrome */
   aspect-ratio: 1/1;
-  @supports not (aspect-ratio: 1 / 1) {
-    &::before {
-      float: left;
-      padding-top: 100%;
-      content: "";
-    }
-
-    &::after {
-      display: block;
-      content: "";
-      clear: both;
-    }
-  }
   background-color: transparent;
   border: 2px solid white;
   border-radius: 100%;

@@ -7,16 +7,10 @@ const About = () => {
     const bubbles = document.getElementsByClassName("bubble");
     for (let i = 0; i < bubbles.length; i++) {
       const bubble = bubbles[i];
-      bubble.addEventListener("mouseleave", () => {
+      bubble.addEventListener("mouseenter", () => {
         setScore((value)=>{
             return value += 1;
         });
-        bubble.style.zIndex = -13;
-        setTimeout(() => {
-        }, 500);
-        setTimeout(() => {
-          bubble.style.zIndex = 1;
-        }, 2000);
       });
       bubble.addEventListener("animationend", () => {
         changePosition(bubble);

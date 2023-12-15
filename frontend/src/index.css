@@ -3,8 +3,7 @@
   color: white;
   font-family: "Dosis", sans-serif;
   margin: 0%;
-  /* scroll-behavior: smooth; */
-  /* scroll-behavior: calc(3); */
+  scroll-behavior: smooth;
   --green: rgb(25, 245, 170);
 }
 
@@ -402,17 +401,171 @@ button.github:hover {
   border-top: 3px solid var(--green);
   display: flex;
   width: 100%;
-  min-height: 50vh;
+  min-height: 100vh;
   height: fit-content;
   flex-direction: column;
-  justify-content: space-around;
+  justify-content: flex-end;
   align-items: center;
+  margin-bottom: 1vh;
+}
+
+
+.moonAnimationDiv{
+  height: 50vh;
+  width: 100%;
+  overflow: visible;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.moon {
+  position: relative;
+  /* top: 100%; */
+  animation: rotation 24s linear infinite;
+  background: #F6EDBD;
+  box-shadow: 0 0 5rem 0.75rem #f6edbd, 0 0 3rem 0.75rem #ece1a8 inset;
+  border-radius: 50%;
+  height: 10rem;
+  width: 10rem;
+}
+
+.moon:hover{
+  animation-play-state: paused;
+}
+
+.crater--0 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--1 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--2 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--3 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--4 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--5 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--6 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--7 {
+  position: absolute;
+  background: #ece1a8;
+}
+
+.crater--0 {
+  top: 1.2rem;
+  left: 1.4rem;
+  border-radius: 42%;
+  transform: rotate(-30deg);
+  height: 1.1rem;
+  width: 3rem;
+}
+.crater--1 {
+  top: 1.6rem;
+  left: 1.4rem;
+  background: #F6EDBD;
+  border-radius: 42%;
+  box-shadow: inset -2px 4px 4px 0px #ece1a8;
+  transform: rotate(-40deg);
+  height: 1.1rem;
+  width: 3.7rem;
+}
+.crater--2 {
+  top: 2rem;
+  left: 3.2rem;
+  border-radius: 48%;
+  box-shadow: 0 2px 4px 0px #ece1a8;
+  height: 1.9rem;
+  width: 2.1rem;
+}
+.crater--3 {
+  top: 1rem;
+  left: 4.3rem;
+  border-radius: 48%;
+  box-shadow: 0 -2px 4px 0px #ece1a8;
+  height: 1.6rem;
+  width: 2.4rem;
+}
+.crater--4 {
+  top: 5rem;
+  left: 0.8rem;
+  border-radius: 48%;
+  height: 3.6rem;
+  width: 5.1rem;
+}
+.crater--5 {
+  top: 5rem;
+  left: 0.7rem;
+  background: #F6EDBD;
+  box-shadow: inset 0 -5px 8px 0px #ece1a8;
+  border-radius: 38%;
+  transform: rotate(15deg);
+  height: 3rem;
+  width: 6.4rem;
+}
+.crater--6 {
+  top: 4rem;
+  left: 1rem;
+  background: #F6EDBD;
+  border-radius: 42%;
+  height: 3rem;
+  width: 3rem;
+}
+.crater--7 {
+  top: 4rem;
+  left: 1rem;
+  border-radius: 42%;
+  box-shadow: 4px 3px 6px 3px #ece1a8;
+  height: 3rem;
+  width: 3.2rem;
+}
+
+@keyframes rotation {
+  0%{
+    transform: rotate(-50deg) translateX(-100vw) rotate(0deg);
+  }
+  100%{
+    transform: rotate(50deg) translateX(100vw) rotate(0deg);
+  }
+}
+
+.contactPage > div.contentBox{
+  z-index: 1;
+  background-color: transparent;
+}
+
+.contentBox img,h1 {
+  background-color: transparent;
 }
 
 .contactContainer {
   display: flex;
   justify-content: space-evenly;
   width: 100%;
+  z-index: 1;
+  background-color: transparent;
 }
 
 .contactPage a {
@@ -446,6 +599,44 @@ button.github:hover {
   font-weight: 900;
   font-size: larger;
 }
+
+/* sky */
+.skyDiv{
+  position: absolute;
+  width: 99%;
+  height: 100vh;
+  overflow: hidden;
+}
+
+.sky {
+  background-color: transparent;
+  position:absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+}
+.star{
+  background-color: transparent;
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+  height: 2px;
+  width: 2px;
+  animation: 3s shining 3.1s infinite;
+}
+@keyframes shining {
+  0% {
+      opacity: 1;
+  }
+  50% {
+      opacity: 0.3;
+  }
+  100% {
+      opacity: 1;
+  }
+}
+
 
 /* universal */
 svg {

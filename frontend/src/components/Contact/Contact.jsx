@@ -1,12 +1,30 @@
 import React from "react";
+import { Sky } from "../Sky/Sky";
 
 const Contact = () => {
   return (
     <div className="section contactPage" id="contactMe">
-      <div>
+      <section className="skyDiv">
+        <Sky count={300} />
+        <div className="moonAnimationDiv">
+          <section className="moon">
+            <div className="crater--0"></div>
+            <div className="crater--1"></div>
+            <div className="crater--2"></div>
+            <div className="crater--3"></div>
+            <div className="crater--4"></div>
+            <div className="crater--5"></div>
+            <div className="crater--6"></div>
+            <div className="crater--7"></div>
+          </section>
+        </div>
+      </section>
+      <div className="contentBox">
         <img width="150px" src="Images/memoji.png" alt="memoji"></img>
       </div>
-      <h1>Contact Me</h1>
+      <div className="contentBox">
+        <h1>Contact Me</h1>
+      </div>
       <div className="contactContainer">
         <a
           href="mailto:vanshbajaj705@gmail.com"

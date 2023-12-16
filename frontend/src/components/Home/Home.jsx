@@ -2,6 +2,7 @@ import Name from "./Name";
 import gsap from "gsap";
 import { useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Cloud from "../Clouds/Cloud";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -73,6 +74,7 @@ const Home = () => {
         <img src="Images/bg.svg" alt="my pic" style={loaded ? {display: 'none'} : {}}/> 
       </div>
       <div className="nameTextDiv">
+        <Cloud/>
         <h1 className="green">Hii</h1>
         <h1>
           <span>

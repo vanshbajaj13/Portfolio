@@ -50,7 +50,7 @@ const About = () => {
   }
 
   return (
-    <div className="aboutSection">
+    <div className="aboutSection panel">
     <div className="aboutPage section" id="aboutMe">
       <h1 className="heading">About me</h1>
       <div className="scoreBoard">

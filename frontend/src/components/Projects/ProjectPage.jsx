@@ -59,7 +59,7 @@ const ProjectPage = (props) => {
     // eslint-disable-next-line
   }, []);
   return (
-    <div id="projectPage" className="section">
+    <div id="projectPage" className="section panel">
       <h1 className="heading">My Projects</h1>
       {projects.map((project) => {
         return (

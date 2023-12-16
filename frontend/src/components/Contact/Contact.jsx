@@ -3,7 +3,7 @@ import { Sky } from "../Sky/Sky";
 
 const Contact = () => {
   return (
-    <div className="section contactPage" id="contactMe">
+    <div className="section contactPage panel" id="contactMe">
       <section className="skyDiv">
         <Sky count={300} />
         <div className="moonAnimationDiv">

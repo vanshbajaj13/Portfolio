@@ -30,14 +30,14 @@ const Home = () => {
             autoAlpha: 1,
           },
           {
-            autoAlpha: 0,
+            autoAlpha: 1,
             
             
             scrollTrigger: {
               trigger: home,
               // markers: true,
-              start: "center center",
-              end: () => "+=" + (home.offsetHeight * 2),
+              start: "bottom bottom",
+              end: () => "+=" + (home.offsetHeight * 1.2),
               scrub: true,
               pin: true,
               pinSpacing: false,
@@ -63,7 +63,7 @@ const Home = () => {
     };
   }, []);
   return (
-    <div className="myInfo-container section" id="home">
+    <div className="myInfo-container section panel" id="home">
       <div className="bgImg">
         {imgTop ? 
         <img src="Images/IMG_1336.jpg" alt="my pic" className="imgTop" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} onMouseOver={()=>{genRandomImg()}} />

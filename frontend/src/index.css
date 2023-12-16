@@ -85,7 +85,7 @@ li:hover {
   height: fit-content;
   min-height: 100vh;
   justify-content: space-between;
-  padding: 2vw;
+  /* padding: 2vw; */
   align-items: center;
   flex-wrap: wrap;
   font-size: 2.4rem;
@@ -544,10 +544,10 @@ button.github:hover {
 
 @keyframes rotation {
   0%{
-    transform: rotate(-50deg) translateX(-100vw) rotate(0deg);
+    transform: rotate(-10deg) translateX(-45rem) rotate(0deg);
   }
   100%{
-    transform: rotate(50deg) translateX(100vw) rotate(0deg);
+    transform: rotate(10deg) translateX(45rem) rotate(360deg);
   }
 }
 

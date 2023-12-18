@@ -1,25 +1,20 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect} from "react";
 import Bubbles from "./Bubbles";
 
 const About = () => {
-    const [score, setScore] = useState(0);
   useEffect(() => {
     const bubbles = document.getElementsByClassName("bubble");
     for (let i = 0; i < bubbles.length; i++) {
       const bubble = bubbles[i];
-      bubble.addEventListener("mouseenter", () => {
-        setScore((value)=>{
-            return value += 1;
-        });
-      });
       bubble.addEventListener("animationend", () => {
         changePosition(bubble);
       });
     }
-
+    
     function changePosition(bubble) {
       bubble.style.animationName = "none";
-
+      let animTime = getRandomNumber(3,7);
+      bubble.style.animationDuration = animTime+"s";
       requestAnimationFrame(() => {
         bubble.style.animationName = "";
       });
@@ -53,9 +48,6 @@ const About = () => {
     <div className="aboutSection panel">
     <div className="aboutPage section" id="aboutMe">
       <h1 className="heading">About me</h1>
-      <div className="scoreBoard">
-      <h1>Score - {score}</h1>
-      </div>
       <div className="aboutContainer">
         <div className="aboutTools" id="bubbleContainer">
           <Bubbles text="React" />
@@ -66,6 +58,7 @@ const About = () => {
           <Bubbles text="Bootstrap" />
           <Bubbles text="Mongo" />
           <Bubbles text="Gsap" />
+          <Bubbles text="C++" />
         </div>
       </div>
     </div>

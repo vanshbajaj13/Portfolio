@@ -1,11 +1,13 @@
 import React from "react";
 import { Sky } from "../Sky/Sky";
+import MeteorShower from "../Sky/MeteorShower";
 
 const Contact = () => {
   return (
     <div className="section contactPage panel" id="contactMe">
       <section className="skyDiv">
         <Sky count={300} />
+        <MeteorShower count={5} />
         <div className="moonAnimationDiv">
           <section className="moon">
             <div className="crater--0"></div>

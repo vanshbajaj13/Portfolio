@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import Drop from "./Drop";
 
 const Cloud = () => {
@@ -9,16 +9,26 @@ const Cloud = () => {
   function changeRain() {
     let dr = document.getElementsByClassName("drop");
     for (let i = 0; i < dr.length; i++) {
-        const element = dr[i];
-        if (element.style.width === "0.5rem") {
-          element.style.width = "0.1rem";
-          element.style.height = "0.1rem";
-        } else {
-            element.style.width = "0.5rem";
-            element.style.height = "0.5rem";
-        }
+      const element = dr[i];
+      if (element.style.width === "0.5rem") {
+        element.style.width = "0.1rem";
+        element.style.height = "0.1rem";
+      } else {
+        element.style.width = "0.5rem";
+        element.style.height = "0.5rem";
+      }
     }
   }
+  useEffect(() => {
+    const rainChaneInterval = setInterval(() => {
+      changeRain();
+    }, 5000);
+
+    return () => {
+      clearInterval(rainChaneInterval);
+    };
+  }, []);
+
   return (
     <div className="cloudContainer">
       <div id="cloud" onClick={changeRain}>

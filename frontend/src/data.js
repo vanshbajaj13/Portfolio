@@ -16,7 +16,7 @@ export const projects = [
         Image : "inventoryManagement.png",
         website : "https://inventory-management-jtz4.onrender.com",
         github : "https://github.com/vanshbajaj13/Inventory-Management",
-        username: "admin@gmail.com",
+        account: "admin@gmail.com",
         password: "admin123"
     },
     { 

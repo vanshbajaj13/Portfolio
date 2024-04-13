@@ -9,8 +9,18 @@ export const projects = [
         account : "demo@example.com",
         password : "12345678"
     },
-    { 
+    {   
         id : 2,
+        title: "Inventory Management System",
+        description: "The Inventory Management System is a web application designed to help businesses efficiently manage their inventory. It allows users to track inventory levels, sales, and purchases in real-time. Features include product management, order processing, reporting, and user authentication.",
+        Image : "inventoryManagement.png",
+        website : "https://inventory-management-jtz4.onrender.com",
+        github : "https://github.com/vanshbajaj13/Inventory-Management",
+        username: "admin@gmail.com",
+        password: "admin123"
+    },
+    { 
+        id : 3,
         title: "Mercury Classes",
         description: "Mercury Classes is an education institute that offers a wide range of programs to help students achieve their academic goals. As a web developer, I had the opportunity to create an impressive website that accurately represents their brand and services. My skills in website development and attention to detail allowed me to design and develop a user-friendly website that showcases their programs and services in an engaging manner.",
         Image : "MercuryClasses.png",
@@ -18,7 +28,7 @@ export const projects = [
         github : "https://github.com/vanshbajaj13/Mercury-Classes"
     },
     { 
-        id : 3,
+        id : 4,
         title: "Orange",
         description: "I made this website when i just started lerning web development, this is my first website ever. I used CSS and HTML only for this website.",
         Image : "orange.png",

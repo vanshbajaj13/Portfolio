@@ -693,6 +693,7 @@ button.github:hover {
   position: relative;
   top: -5rem;
   background-color: transparent;
+  cursor: pointer;
 }
 
 #cloud {
@@ -708,6 +709,32 @@ button.github:hover {
   animation: mover 6s infinite  alternate;
 }
 
+
+
+.tooltip {
+  position: absolute;
+  bottom: 10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: transparent;
+  color: black;
+  padding: 0px;
+  /* border-radius: 4px; */
+  font-size: 1rem;
+  font-weight: bolder;
+  transition: opacity 0.3s ease-in-out;
+  opacity: 0;
+  z-index: 5; /* Ensure tooltip appears above other elements */
+}
+
+.tooltip:hover{
+  color: var(--green);
+  opacity: 1;
+}
+
+.tooltip.show {
+  opacity: 1;
+}
 
 #cloud:after, div#cloud:before {
 	content: '';

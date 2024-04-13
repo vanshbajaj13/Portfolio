@@ -52,13 +52,15 @@ const About = () => {
         <div className="aboutTools" id="bubbleContainer">
           <Bubbles text="React" />
           <Bubbles text="Git" />
-          <Bubbles text="Node js" />
+          <Bubbles text="Node Js" />
           <Bubbles text="JavaScript" />
           <Bubbles text="CSS" />
           <Bubbles text="Bootstrap" />
           <Bubbles text="Mongo" />
           <Bubbles text="Gsap" />
           <Bubbles text="C++" />
+          <Bubbles text="Chart.Js" />
+          <Bubbles text="JWT" />
         </div>
       </div>
     </div>

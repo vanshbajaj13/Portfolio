@@ -64,7 +64,7 @@ const About = () => {
         </div>
       </div>
     </div>
-    <div className="aboutText">
+    <div className="aboutText" id="aboutMeText">
         <p>
           I am a Full Stack Developer with a passion for building beautiful and
           user- friendly websites. I have a strong understanding of both

@@ -37,7 +37,7 @@ const Home = () => {
             scrollTrigger: {
               trigger: home,
               // markers: true,
-              start: "bottom bottom",
+              start: 'top top',
               end: () => "+=" + (home.offsetHeight * 1.2),
               scrub: true,
               pin: true,

@@ -9,14 +9,14 @@
       name="description"
       content="Vansh Bajaj's dynamic portfolio website - showcasing a creative journey through captivating designs and engaging content."
     />
-<!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script> -->
+    <!-- <script src="//cdnjs.cloudflare.com/ajax/libs/ScrollMagic/2.0.7/plugins/animation.gsap.js"></script> -->
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Dosis&display=swap");
       @import url("https://fonts.googleapis.com/css2?family=Braah+One&family=Rubik&display=swap");
       /* Loader */
 
       * {
-        background-color: #2d2c38 ;
+        background-color: #2d2c38;
         color: white;
         font-family: "Dosis", sans-serif;
         margin: 0%;
@@ -26,7 +26,8 @@
       .loader {
         margin: 0%;
         position: absolute;
-        background: black;
+        background-color: #2d2c38;
+        /* background: black; */
         display: flex;
         justify-content: center;
         align-items: center;
@@ -208,14 +209,10 @@
         position: absolute;
         font-size: 20px;
         color: gray;
-        background-color: black;
         bottom: 10%;
         width: 100vw;
         text-align: center;
         animation: 4s anim-lineUp ease-in infinite;
-      }
-      .quote h3 {
-        background-color: black;
       }
 
       @keyframes anim-lineUp {
@@ -240,13 +237,31 @@
           transform: translateY(-100%);
         }
       }
+
+      .loader{
+        animation-name: fades;
+        animation-duration: 1s;
+        animation-delay: 3s;
+        animation-fill-mode: forwards;
+      }
+
+      @keyframes fades {
+        0%{
+          opacity: 1;
+        }
+        100%{
+          opacity: 0;
+        }
+        
+      }
+
     </style>
     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.5/gsap.min.js" defer></script> -->
     <title>VANSH BAJAJ</title>
   </head>
   <body>
-    <div id="root">
-      <div class="loader" id="loader">
+    <div id="root" class="fade-out">
+      <div class="loader fade-in" id="loader">
         <div class="sk-chase">
           <div class="sk-chase-dot"></div>
           <div class="sk-chase-dot"></div>

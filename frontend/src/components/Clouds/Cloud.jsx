@@ -24,33 +24,10 @@ const Cloud = () => {
     window.open(`${fileId}`);
   }
 
-  function changeRain() {
-    let dr = document.getElementsByClassName("drop");
-    for (let i = 0; i < dr.length; i++) {
-      const element = dr[i];
-      if (element.style.width === "0.5rem") {
-        element.style.width = "0.1rem";
-        element.style.height = "0.1rem";
-      } else {
-        element.style.width = "0.5rem";
-        element.style.height = "0.5rem";
-      }
-    }
-  }
-
-  useEffect(() => {
-    const rainChangeInterval = setInterval(() => {
-      changeRain();
-    }, 5000);
-
-    return () => {
-      clearInterval(rainChangeInterval);
-    };
-  }, []);
 
   return (
     <div className="cloudContainer" onClick={downloadResume}>
-      <div id="cloud" onClick={changeRain}>
+      <div id="cloud">
         <span className="shadow"></span>
         <div className="rain">
       <div className={`tooltip ${showTooltip ? "show" : ""}`}>

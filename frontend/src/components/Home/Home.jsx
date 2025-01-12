@@ -11,17 +11,6 @@ const Home = () => {
   const text3 = Array.from(" bajaj");
 
   const [loaded, setLoaded] = useState(false);  
-  const [imgTop, setImgTop] = useState(true);
-  function genRandomImg() {
-    let x =  Math.floor(Math.random()*100);
-    // console.log(x);
-    if (x%2 === 0) {
-      setImgTop((pv)=>{
-        return !pv;
-      });
-    }
-  }
-  genRandomImg();
   useLayoutEffect(() => {
     const ctx = gsap.context(() => {
       gsap.utils.toArray("#home").forEach((home) => {
@@ -66,11 +55,7 @@ const Home = () => {
   return (
     <div className="myInfo-container section panel" id="home">
       <div className="bgImg">
-        {imgTop ? 
-        <img src="Images/IMG_1336.jpg" alt="my pic" className="imgTop" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} onMouseOver={()=>{genRandomImg()}} />
-        :
-        <img src="Images/IMG_1337.jpg" className="imgTop" alt="my pic" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} onMouseOver={()=>{genRandomImg()}}/>
-        }
+        <img src="Images/IMG_1336.jpg" alt="my pic" className="imgTop" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} />
         <img src="Images/bg.svg" alt="my pic" style={loaded ? {display: 'none'} : {}}/> 
       </div>
       <div className="nameTextDiv">

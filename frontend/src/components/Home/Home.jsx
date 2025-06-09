@@ -56,7 +56,7 @@ const Home = () => {
     <div className="myInfo-container section panel" id="home">
       <div className="imgContainer">
         <div className="borderLine"></div>
-        <img className="BackgroundImg card" src="Images/background.jpg" alt="BgIMG"/>
+        <img className="BackgroundImg card" src="Images/Background.jpg" alt="BgIMG"/>
         <img src="Images/IMG_1334.jpeg" alt="my pic" className="imgTop profileImg" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} />
         <img className="profileImg" src="Images/bg.svg" alt="my pic" style={loaded ? {display: 'none'} : {}}/> 
       </div>

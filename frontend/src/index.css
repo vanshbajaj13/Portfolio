@@ -100,12 +100,14 @@ li:hover {
   display: flex;
   height: fit-content;
   min-height: 100vh;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   /* padding: 2vw; */
   align-items: center;
   flex-wrap: wrap;
+  flex-direction: column;
   font-size: 2.4rem;
   width: 100%;
+  /* border: 3px solid red; */
 }
 
 .myInfo-container p {
@@ -114,25 +116,75 @@ li:hover {
   font-size: medium;
 }
 .myInfo-container div {
-  margin: auto;
-}
-.myInfo-container div.bgImg {
-  border: 3px solid white;
-  box-sizing: border-box;
-  overflow: hidden;
-  background-color: white;
-  animation-duration: 8s;
-  animation-timing-function: ease-in-out;
-  animation-delay: 0s;
-  animation-iteration-count: infinite;
-  animation-direction: normal;
-  animation-fill-mode: none;
-  animation-play-state: running;
-  animation-name: rotate;
+  margin: 0;
 }
 
-.myInfo-container img {
-  width: 30vw;
+
+.imgContainer {
+  position: relative; /* Important */
+  height: 50vh;
+}
+
+.BackgroundImg {
+  position: relative;
+  width: 100vw;
+  height: 45vh;
+  object-fit: cover;
+  object-position: bottom;
+  /* border-bottom: 3px solid grey; */
+}
+
+.borderLine {
+  position: absolute;
+  width: 50vw;
+  height: 45vh;
+  animation: moveBorder 6s linear infinite;
+  /* animation-delay: 2s; */
+  background: linear-gradient(to right, rgba(0,0,0,0), #fff, rgba(0,0,0,0) 100%);
+  filter: drop-shadow(0 0 5px #fff);
+}
+
+
+/* Rotation animation */
+@keyframes moveBorder {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 100vw;
+  }
+}
+
+
+.profileImg {
+  border: 3px solid white;
+  position: absolute;
+  left: 2vw;
+
+  /* Adjust bottom edge to overlap */
+  bottom: -5vw; /* Half of the image height (assuming 20vw) */
+
+  width: 20vw;
+  height: 20vw;
+  min-width: 150px;
+  min-height: 150px;
+  border-radius: 50%;
+  background-color: white;
+
+  box-sizing: border-box;
+  overflow: hidden;
+
+  animation-name: rotate;
+  animation-duration: 8s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+
+
+.nameTextDiv{
+  position: relative;
+  top: 5vh;
 }
 
 .myInfo-container span {
@@ -710,6 +762,7 @@ h1 {
 
 .cloudContainer {
   position: relative;
+  width: 10px;
   top: -5rem;
   background-color: transparent;
   cursor: pointer;
@@ -864,17 +917,6 @@ a {
 @media screen and (max-width: 660px) {
   .myInfo-container {
     font-size: 1.8rem;
-  }
-  .myInfo-container div {
-    margin: auto;
-    margin-top: 0;
-  }
-  .myInfo-container div.bgImg {
-    width: 40%;
-    margin: auto;
-  }
-  .myInfo-container img {
-    width: 40vw;
   }
 }
 @media screen and (max-width: 420px) {

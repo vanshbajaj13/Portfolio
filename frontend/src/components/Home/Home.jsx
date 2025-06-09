@@ -2,7 +2,7 @@ import Name from "./Name";
 import gsap from "gsap";
 import { useLayoutEffect, useState } from "react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
-import Cloud from "../Clouds/Cloud";
+// import Cloud from "../Clouds/Cloud";
 gsap.registerPlugin(ScrollTrigger);
 
 const Home = () => {
@@ -54,12 +54,14 @@ const Home = () => {
   }, []);
   return (
     <div className="myInfo-container section panel" id="home">
-      <div className="bgImg">
-        <img src="Images/IMG_1334.jpeg" alt="my pic" className="imgTop" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} />
-        <img src="Images/bg.svg" alt="my pic" style={loaded ? {display: 'none'} : {}}/> 
+      <div className="imgContainer">
+        <div className="borderLine"></div>
+        <img className="BackgroundImg card" src="Images/background.jpg" alt="BgIMG"/>
+        <img src="Images/IMG_1334.jpeg" alt="my pic" className="imgTop profileImg" style={loaded ? {} : {display: 'none'}} onLoad={()=>{setLoaded(true)}} />
+        <img className="profileImg" src="Images/bg.svg" alt="my pic" style={loaded ? {display: 'none'} : {}}/> 
       </div>
       <div className="nameTextDiv">
-        <Cloud/>
+        {/* <Cloud/> */}
         <h1 className="green">Hii</h1>
         <h1>
           <span>

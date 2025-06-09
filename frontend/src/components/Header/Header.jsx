@@ -15,6 +15,14 @@ const Header = () => {
     oldScrollY = window.scrollY;
   });
 
+  
+  function downloadResume() {
+    // Replace FILE_ID with the actual file ID from your Google Drive link
+    const fileId =
+      "https://drive.google.com/file/d/1f2tCJX8vnnkY2c8-XwcHYFMicsywHp6Q/view?usp=sharing";
+    window.open(`${fileId}`);
+  }
+
   return (
     <div>
       <header className={navBarToggle}>
@@ -23,13 +31,13 @@ const Header = () => {
             <a href="#top">Home</a>
           </li>
           <li>
-            <a href="#aboutMe">About</a>
-          </li>
-          <li>
             <a href="#projectPage">Projects</a>
           </li>
           <li>
             <a href="#contactMe">Contact</a>
+          </li>
+          <li>
+            <a href="#aboutMe" onClick={downloadResume} >Resume</a>
           </li>
         </ul>
       </header>
